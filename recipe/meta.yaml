@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-build-isolation
   number: 0
 
 requirements:
@@ -20,17 +20,13 @@ requirements:
     - hatchling
     - pip
   run:
-    - python >=3.8
     - fenics-dolfinx ==0.9.0
-    - gmsh
-    - matplotlib-base
     - mpi4py
-    - mpich
-    - pandas
-    - petsc4py
     - numpy
+    - pandas
     - pyvista
-    - time
+    - python>=3.8
+    - pytest
 
 test:
   imports:
