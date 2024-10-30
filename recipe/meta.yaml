@@ -1,17 +1,17 @@
 {% set name = "phasefieldx" %}
-{% set version = "0.0.5" %}
+{% set version = "0.0.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/CastillonMiguel/phasefieldx/archive/v{{ version }}.tar.gz
-  sha256: f434c699c92575ed79576f7b266631e4e8bfc4c2b2b0d940b9efb715361339c6
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phasefieldx-{{ version }}.tar.gz
+  sha256: 91a33ca2ff3e5ec4c2e58ba48f45230a1c98660a90864db9053584826c02b5b9
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -20,13 +20,13 @@ requirements:
     - hatchling
     - pip
   run:
-    - fenics-dolfinx ==0.9.0
+    - python >=3.8
+    - fenics-dolfinx
+    - gmsh
     - mpi4py
     - numpy
     - pandas
     - pyvista
-    - python>=3.8
-    - pytest
 
 test:
   imports:
