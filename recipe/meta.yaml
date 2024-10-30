@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phasefieldx-{{ version }}.tar.gz
-  sha256: 91a33ca2ff3e5ec4c2e58ba48f45230a1c98660a90864db9053584826c02b5b9
+  url: https://github.com/CastillonMiguel/phasefieldx/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: e5e2326c12127f1eee5fbf1dcbdc2d32e81ae159f2651531e8cd855d33f73728
 
 build:
   number: 0
