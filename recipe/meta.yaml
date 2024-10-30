@@ -39,6 +39,16 @@ requirements:
     - pandas
     - pyvista
 
+test:
+  source_files:
+    - test
+  requires:
+    - pip
+    - ipyparallel
+    - pytest
+  commands:
+    - pytest -vs test
+    - pip check
 
 about:
   home: https://github.com/CastillonMiguel/phasefieldx
