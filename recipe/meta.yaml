@@ -41,6 +41,7 @@ requirements:
 
 test:
   source_files:
+    - pyproject.toml
     - test
   requires:
     - pip
