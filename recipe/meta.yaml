@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phasefieldx-{{ version }}.tar.gz
-  sha256: 91a33ca2ff3e5ec4c2e58ba48f45230a1c98660a90864db9053584826c02b5b9
+  url: https://github.com/CastillonMiguel/phasefieldx/archive/v{{ version }}.tar.gz
+  sha256: e18f215b44f5b18279743bd2535c648249fa6a83f2fe8286914a2a5e3b0551a1
 
 build:
   number: 0
@@ -28,7 +28,6 @@ build:
 requirements:
   host:
     - python >=3.8
-    - hatchling
     - pip
   run:
     - python >=3.8
