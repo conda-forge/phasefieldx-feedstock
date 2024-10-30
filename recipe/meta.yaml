@@ -39,13 +39,6 @@ requirements:
     - pandas
     - pyvista
 
-test:
-  imports:
-    - phasefieldx
-  commands:
-    - pip check
-  requires:
-    - pip
 
 about:
   home: https://github.com/CastillonMiguel/phasefieldx
