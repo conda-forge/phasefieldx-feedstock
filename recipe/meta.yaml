@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/CastillonMiguel/phasefieldx/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e18f215b44f5b18279743bd2535c648249fa6a83f2fe8286914a2a5e3b0551a1
+  sha256: e5e2326c12127f1eee5fbf1dcbdc2d32e81ae159f2651531e8cd855d33f73728
 
 build:
   number: 0
