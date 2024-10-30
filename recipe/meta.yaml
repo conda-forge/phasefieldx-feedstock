@@ -30,7 +30,7 @@ requirements:
 
 test:
   source_files:
-    - pyproject.toml
+    - src
     - test
   requires:
     - pip
