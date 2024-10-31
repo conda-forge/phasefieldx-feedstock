@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/CastillonMiguel/phasefieldx/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e5e2326c12127f1eee5fbf1dcbdc2d32e81ae159f2651531e8cd855d33f73728
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/phasefieldx-{{ version }}.tar.gz
+  sha256: 91a33ca2ff3e5ec4c2e58ba48f45230a1c98660a90864db9053584826c02b5b9
 
 build:
-  number: 0
   noarch: python
-  script: python -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
-    - python >=3.12
+    - python >=3.8
     - hatchling
     - pip
   run:
-    - python >=3.12
+    - python >=3.8
     - fenics-dolfinx
     - gmsh
     - mpi4py
@@ -29,24 +29,12 @@ requirements:
     - pyvista
 
 test:
-  source_files:
-    - pyproject.toml
-    - test
+  imports:
+    - phasefieldx
+  commands:
+    - pip check
   requires:
     - pip
-    - pytest
-    - fenics-dolfinx
-    - gmsh
-    - mpi4py
-    - numpy
-    - pandas
-    - pyvista
-    - setuptools 
-    - wheel 
-  commands:
-    - python -m build
-    - pytest -vs test
-    - pip check
 
 about:
   home: https://github.com/CastillonMiguel/phasefieldx
