@@ -43,9 +43,8 @@ test:
     - pyvista
     - setuptools 
     - wheel 
-    - build
   commands:
-    - python -m pip install .
+    - python -m build
     - pytest -vs test
     - pip check
 
