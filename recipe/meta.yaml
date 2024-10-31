@@ -41,6 +41,9 @@ test:
     - numpy
     - pandas
     - pyvista
+    - setuptools 
+    - wheel 
+    - build
   commands:
     - python -m pip install .
     - pytest -vs test
