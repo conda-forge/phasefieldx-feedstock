@@ -30,12 +30,18 @@ requirements:
 
 test:
   source_files:
-    - src
     - test
   requires:
     - pip
     - pytest
+    - fenics-dolfinx
+    - gmsh
+    - mpi4py
+    - numpy
+    - pandas
+    - pyvista
   commands:
+    - python -m pip install .
     - pytest -vs test
     - pip check
 
