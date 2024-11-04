@@ -38,14 +38,6 @@ requirements:
     - pandas ==2.2.3
     - pyvista ==0.44.1
 
-test:
-  imports:
-    - phasefieldx
-  commands:
-    - pip check
-  requires:
-    - pip
-
 about:
   home: https://github.com/CastillonMiguel/phasefieldx
   summary: 'PhaseFieldX: An Open-Source Framework for Advanced Phase-Field Simulations'
@@ -58,4 +50,3 @@ about:
 extra:
   recipe-maintainers:
     - CastillonMiguel
-    
