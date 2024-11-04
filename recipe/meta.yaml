@@ -1,6 +1,5 @@
 {% set name = "phasefieldx" %}
 {% set version = "0.0.6" %}
-
 package:
   name: {{ name|lower }}
   version: {{ version }}
@@ -24,6 +23,8 @@ requirements:
     - python >=3.8
     - gmsh
     - mpi4py
+    - mpich
+    - petsc4py
     - numpy
     - pandas
     - pyvista
