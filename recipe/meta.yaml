@@ -1,17 +1,18 @@
 {% set name = "phasefieldx" %}
 {% set version = "0.0.6" %}
+
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/CastillonMiguel/phasefieldx/archive/refs/tags/v{{ version }}.tar.gz
+  url: https://github.com/CastillonMiguel/phasefieldx/archive/v{{ version }}.tar.gz
   sha256: e5e2326c12127f1eee5fbf1dcbdc2d32e81ae159f2651531e8cd855d33f73728
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -19,12 +20,10 @@ requirements:
     - hatchling
     - pip
   run:
-    - fenics-dolfinx ==0.9.0
     - python >=3.8
+    - fenics-dolfinx
     - gmsh
     - mpi4py
-    - mpich
-    - petsc4py
     - numpy
     - pandas
     - pyvista
