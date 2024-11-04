@@ -23,7 +23,6 @@ requirements:
     - python >=3.8
     - fenics-dolfinx
     - gmsh
-    - mpi4py
     - numpy
     - pandas
     - pyvista
