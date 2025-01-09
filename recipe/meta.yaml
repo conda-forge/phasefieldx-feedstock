@@ -1,5 +1,5 @@
 {% set name = "phasefieldx" %}
-{% set version = "0.0.6" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/CastillonMiguel/phasefieldx/archive/v{{ version }}.tar.gz
-  sha256: e5e2326c12127f1eee5fbf1dcbdc2d32e81ae159f2651531e8cd855d33f73728
+  sha256: b9f487257b1177f68d78e576606488c5a11af6024270268084cf51f476a9165f
 
 build:
   number: 0
