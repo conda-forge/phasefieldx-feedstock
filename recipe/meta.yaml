@@ -1,13 +1,13 @@
 {% set name = "phasefieldx" %}
-{% set version = "0.0.6" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/CastillonMiguel/phasefieldx/archive/v{{ version }}.tar.gz
-  sha256: e5e2326c12127f1eee5fbf1dcbdc2d32e81ae159f2651531e8cd855d33f73728
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5645d7286d5f24352d6db3b3336d77a43f6fca8e1491e160163a93c55aafc38c
 
 build:
   number: 0
@@ -27,16 +27,19 @@ build:
 
 requirements:
   host:
-    - python >=3.12
+    - python >=3.10
     - hatchling
     - pip
   run:
-    - python >=3.12
-    - fenics-dolfinx ==0.9.0
-    - gmsh ==4.13.1
-    - numpy ==2.1.1
-    - pandas ==2.2.3
-    - pyvista ==0.44.1
+    - python >=3.10
+    - fenics-dolfinx ==0.10.0
+    - gmsh
+    - mpi4py
+    - numpy
+    - pandas
+    - pytest
+    - pyvista
+    - scifem
 
 about:
   home: https://github.com/CastillonMiguel/phasefieldx
