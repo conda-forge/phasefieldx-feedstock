@@ -1,12 +1,13 @@
 {% set name = "phasefieldx" %}
 {% set version = "0.3.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 5645d7286d5f24352d6db3b3336d77a43f6fca8e1491e160163a93c55aafc38c
 
 build:
@@ -17,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - fenics-dolfinx ==0.10.0
     - gmsh
     - mpi4py
@@ -30,6 +31,15 @@ requirements:
     - pytest
     - pyvista
     - scifem
+
+test:
+  imports:
+    - phasefieldx
+  commands:
+    - pip check
+  requires:
+    - python {{ python_min }}
+    - pip
 
 about:
   home: https://github.com/CastillonMiguel/phasefieldx
