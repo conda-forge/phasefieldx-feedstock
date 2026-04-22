@@ -24,7 +24,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - fenics-dolfinx ==0.10.0
-    - gmsh
+    - python-gmsh
     - mpi4py
     - numpy
     - pandas
