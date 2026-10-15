@@ -1,5 +1,5 @@
 {% set name = "phasefieldx" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e9fdaa8efefc65aae784cb63f1133ac3a4e63ea25caf522ddc3735b47407d8f5
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ad1c5c6cd6ac9741d499910efc15c1d744ac51f2efb91a9faa3761e4dc568c60
 
 build:
   number: 0
